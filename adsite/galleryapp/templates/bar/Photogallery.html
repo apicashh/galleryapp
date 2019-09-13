@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block header %}{% endblock header %}
+
+{% block content%}
+
+
+<div class="container">
+	<h1 align="center" style="color:Tomato">&#10024; Photosessions &#10024;</h1>
+	<div class='row'>
+	{% for obj in list_photosession %}
+		<div class='col-lg-3 col-md-4  col-sm-6 col-6 text-center'>
+    <h3><a href="{% url 'Photos' obj.id %}" title="All photos {{ obj.title }} "> {{ obj.title }} </a> </h3>
+	<a href="{% url 'Photos' obj.id %}" title="{{ obj.title }}" target="_blank"><img src='{{ obj.img.url }}'  class="img-thumbnail"></a>
+		</div>
+        <hr>
+	{% endfor %}
+	</div>
+</div>
+
+<hr>
+
+<h1 align="center"><strong><a href="{% url 'Modelgallery' %}" >Tranny video</a></strong></h1>
+
+	<div class='row'>
+	{% for obj in list %}
+		<div class='col-md-2 col-sm-3 col-4 text-center'>
+	<a href='{{ obj.direct_url }}' title="{{ obj.name }}" target="_blank"><img src='{{ obj.thumb }}' class="img-thumbnail" ></a>
+		</div>
+	{% endfor %}
+	</div>
+
+
+
+{% endblock  %}

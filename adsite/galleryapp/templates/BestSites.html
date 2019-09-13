@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container text-center'>
+	<hr>
+<h1 align="center" style="color:Tomato">&#10024; Best sites &#10024;</h1>
+	<hr>
+
+	<div class='row'>
+		{% for b_site in sites_list %}
+
+		<div class='col-sm-6 col-md-4 mb-3'>
+			<a href='{{ b_site.url }}' target="_blank" ><img src='{{ b_site.image.url }}' class='img-thumbnail'  title="{{ b_site.name }}"></a>
+		</div>
+		<div class='col-sm-5 col-md-7 mb-3'>
+			<h2 class = 'text-center'>{{ b_site.title }}</h2>
+			<p>{{ b_site.content }}</p>
+		</div>
+		<div class='col-sm-1 col-md-1 mb-3 text-center'>
+			<a href='{{b_site.url }}' target="_blank" ><button class='btn btn-primary text-center'>Site</button></a>
+		</div>
+		{% endfor %}
+		
+	</div>
+</div>
+
+			<h3 align="center"><strong><a href="{% url 'Gallery'  %}" >Tranny model &#127827;</a></strong></h3>
+	<div class='row'>
+		{% for obj in dump_list %}
+    	<div class='col-lg-1 col-md-2 col-sm-3 col-6 text-center'>
+			<a href='{{ obj.direct_url }}' title="{{ obj.name }}" target="_blank"><img src='{{ obj.thumbnail200 }}' class='img-thumbnail'></a>
+		</div>
+		{% endfor %}
+	</div>
+
+
+{% endblock content %}
+        

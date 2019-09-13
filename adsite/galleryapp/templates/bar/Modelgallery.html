@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}{% endblock header %}
+
+{% block content %}
+
+<h1 align="center" style="color:Tomato">&#10024; Tranny video &#10024;</h1>
+	<div class='row'>
+	{% for obj in list %}
+		<div class='col-lg-2 col-md-3 col-sm-4 col-6 text-center'>
+	<a href='{{ obj.direct_url }}' title="{{ obj.name }}" target="_blank"><img src='{{ obj.thumb }}' class="img-thumbnail" ></a>
+		</div>
+	{% endfor %}
+	</div>
+
+
+
+<h3 align="center"><strong><a href="{% url 'Gallery'  %}" >Tranny model &#127827;</a></strong></h3>
+	<div class='row'>
+		{% for obj in dump_list %}
+    	<div class='col-lg-2 col-md-2 col-sm-3 col-4 text-center'>
+			<a href='{{ obj.direct_url }}' title="{{ obj.name }}" target="_blank"><img src='{{ obj.thumbnail200 }}' class='img-thumbnail'></a>
+		</div>
+		{% endfor %}
+	</div>
+
+
+
+{% endblock  %}

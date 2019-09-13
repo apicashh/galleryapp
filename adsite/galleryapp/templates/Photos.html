@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container text-center'>
+	<h2>Photo {{ photosession.title }}</h2>
+    <div class='row'>
+		{% for photo in photos %}
+		<div class='col-sm-6 col-md-4 mb-2'>
+  <a href='{{ photo.image.url }}' target="_blank" ><img src='{{ photo.image.url }}' class="img-thumbnail"  title="{{ photo.title }}"></a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+	<hr/>
+	<hr/>
+	<hr/>
+
+	<h3 align="center"><strong><a href="{% url 'Gallery'  %}" >Tranny model &#127827;</a></strong></h3>
+	<div class='row'>
+		{% for obj in dump_list %}
+    	<div class='col-lg-2 col-md-3 col-sm-4 col-6 text-center'>
+			<a href='{{ obj.direct_url }}' title="{{ obj.name }}" target="_blank"><img src='{{ obj.thumbnail200 }}' class='img-thumbnail'></a>
+		</div>
+		{% endfor %}
+	</div></div>
+
+{% endblock content %}

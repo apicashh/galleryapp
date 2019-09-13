@@ -1,0 +1,60 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Library</title>
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Signika+Negative&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Chilanka|Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap fixed-top">
+    <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand w-100" href="{% url 'index'  %}">ShemaleFan</a>
+    <div class="navbar-collapse collapse w-100 justify-content-center" id="navbar5">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Gallery'  %}">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Photogallery' %}">Photo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Modelgallery' %}">Models</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Best_sites'  %}">Sites</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Happy</a>
+            </li>
+        </ul>
+    </div>
+    <div class='w-100'></div>
+</nav>
+</div>
+
+{% block header %} {% endblock header %}
+
+{% block content %} {% endblock %}
+
+</body>
+
+  <footer class="py-5 bg-dark" >
+    <div class="container">
+     <small><p class="m-0 text-center text-white">All models were at least 18 years old when they were photographed</p></small>
+       <small><p class="m-0 text-center text-white">Website 2019</p></small>
+    </div>
+  </footer>
+</html>
