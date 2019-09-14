@@ -13,7 +13,7 @@ padding-left: 40px;
 }
 
 h1, h2, h3 {
-    color: #FCA205;
+    color: #FCA205 !important;
     font-family: 'Chilanka', cursive;
 }
 
@@ -21,6 +21,11 @@ h3 a {
     color: #FCA205;
     font-family: 'Chilanka', cursive;
     text-decoration: none !important;
+}
+
+.page-link {
+    color: #000080 !important;
+    font-family: 'Chilanka', cursive;
 }
 
 body {
